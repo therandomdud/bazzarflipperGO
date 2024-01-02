@@ -6,15 +6,15 @@ import (
 )
 
 // Defines the download sources
-type URLProvider string
+type URL string
 
 // Difine here all URLs you need to download from.
 const (
-	BazaarAPI URLProvider = "https://api.hypixel.net/skyblock/bazaar"
+	BazaarAPI URL = "https://api.hypixel.net/skyblock/bazaar"
 )
 
 // GetRequest sends a GET request to the specified URL and returns the response body as a string
-func (provider URLProvider) GetRequest() (string, error) {
+func (provider URL) GetRequest() (string, error) {
 	client := http.Client{}
 	request, err := http.NewRequest("GET", string(provider), nil)
 	if err != nil {
