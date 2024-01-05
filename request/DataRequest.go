@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// Defines the download sources
+// Defines the download sources as a string
 type URL string
 
 // Difine here all URLs you need to download from.
